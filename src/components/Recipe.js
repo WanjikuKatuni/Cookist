@@ -9,14 +9,14 @@ function Recipe() {
 
     useEffect(()=>{
         getRecipeDetails();
-    },[params.name])
+    },[params.id]);
 
     function getRecipeDetails(){
-        fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}`)
+        fetch(`https://api.spoonacular.com/recipes/${params.id}/information?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}`)
         .then((response)=>response.json())
-        .then((detailsData)=>{
-            setRecipeDetails(detailsData)
-            console.log(detailsData)
+        .then((recipeDetailsData)=>{
+            setRecipeDetails(recipeDetailsData)
+            console.log(recipeDetailsData)
     });
     }
 
@@ -24,7 +24,9 @@ function Recipe() {
 
 
   return (
-    <div>Recipe</div>
+    <div>
+        {recipeDetails.title}
+    </div>
   )
 }
 
