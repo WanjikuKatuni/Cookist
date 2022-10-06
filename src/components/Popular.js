@@ -36,6 +36,7 @@ function Popular() {
         {popularData.map((recipe)=>{
             return(
                 <div key={recipe.id}> 
+                    {/* lists all titles of the recipe */}
                     <p>{recipe.title}</p>
                 </div>
             )
