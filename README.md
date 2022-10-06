@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Cookist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An application which provides recipes for every kind of meal
 
 ## Available Scripts
 
