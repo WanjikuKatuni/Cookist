@@ -33,8 +33,11 @@ function Cuisine() {
         {cuisineType.map((item)=>{
             return(
                 <Card key={item.id}>
-                    <img src={item.image} alt={item.title}/>
-                    <h4>{item.title}</h4>
+                    {/* make card be an active link */}
+                    <Link to={`/recipe/${item.id}`}>
+                        <img src={item.image} alt={item.title}/>
+                        <h4>{item.title}</h4>
+                    </Link>
 
                 </Card>
             );
