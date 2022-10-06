@@ -72,12 +72,18 @@ margin: 4rem 0rem;
 `;
 
 const Card = styled.div `
+position: relative;
 broder-radius: 2rem;
 min-height:2rem;
 overflow: hidden;
 
 img {
     border-radius: 2rem;
+    postion: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 `;
 
