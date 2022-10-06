@@ -13,25 +13,25 @@ import {NavLink} from "react-router-dom";
 
 function Category() {
   return (
-    <NavList>
+    <NavList >
         {/* navlink used to create react links */}
-        <NavLink >
+        <NavLink to={'/cuisine/Italian'}>
             <FaPizzaSlice/>
             <h4>Italian</h4>
         </NavLink >
-        <NavLink >
+        <NavLink to={'/cuisine/American'}>
             <FaHamburger/>
             <h4>American</h4>
         </NavLink>
-        <NavLink >
+        <NavLink to={'/cuisine/Chinese'}>
             <GiNoodles/>
             <h4>Chinese</h4>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/cuisine/African'}>
             <TbSoup/>
             <h4>African</h4>
         </NavLink>
-        <NavLink >
+        <NavLink to={'/cuisine/Random'}>
             <GiForkKnifeSpoon/>
             <h4>Random</h4>
         </NavLink>
