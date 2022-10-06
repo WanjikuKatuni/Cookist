@@ -6,8 +6,8 @@ function Recipe() {
 
     const params = useParams();
     const [recipeDetails, setRecipeDetails]=useState({});
-    // set instructions buttone to be active by default
-    cont [activeButton, setActiveButton] = useState('instructions')
+    // 
+    const [activeButton, setActiveButton] = useState('instructions')
 
     useEffect(()=>{
         getRecipeDetails();
@@ -33,10 +33,10 @@ function Recipe() {
             <img src={recipeDetails.image} alt={recipeDetails.title}/>
         </div>
         <Info>
-            <Button>
+            <Button onClick={()=> setActiveButton("instructions")}>
                 Instructions
             </Button>
-            <Button>
+            <Button onClick={()=> setActiveButton("ingredients")}>
                 Ingredients
             </Button>
         </Info>
