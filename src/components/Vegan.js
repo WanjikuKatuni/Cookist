@@ -4,8 +4,9 @@ import React, { useState, useEffect } from 'react'
 // component that has styling
 import styled from 'styled-components';
 // add carosel and splide styling
-import { Splide, SplideSide, SplideSlide } from '@splidejs/react-splide';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "@splidejs/splide/dist/css/splide.min.css";
+import {Link} from "react-router-dom";
 
 
 
@@ -61,11 +62,12 @@ function Vegan() {
           return(
               <SplideSlide key={recipe.id}>
               <Card > 
-                  
-                  {/* lists all titles of the recipe */}
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title}/>
-                  <Gradient />
+                  <Link to={`/recipe/${recipe.id}`}> 
+                    {/* lists all titles of the recipe */}
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title}/>
+                    <Gradient />
+                  </Link>
               </Card>
               </SplideSlide>
           )
