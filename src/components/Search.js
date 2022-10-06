@@ -6,28 +6,46 @@ import {FaSearch} from 'react-icons/fa';
 
 
 function Search() {
+
+    // setState
+    const [searchTerm, setSearchTerm] = useState("");
+
+    function handleSubmit(event){
+        event.preventDefault();
+
+    }
   return (
     // Insert form
-    <StyleForm>
-        <input type="text"/>
-    </StyleForm>
+    <Form onSubmit={handleSubmit}>
+        <div>
+            <FaSearch></FaSearch>
+            <input 
+            type="text"
+            value={searchTerm}/>
+            
+        </div>
+    </Form>
   )
 }
 
 
-const StyleForm = styled.form `
-     margin: 0rem 20rem;
-     position: relative;
-     width:100%;
+const Form = styled.form `
+     margin: 0 2rem;
+     
+     div {
+        width: min(550px, 100%);
+        margin: 0 auto;
+        postion:relative;
+     }
      input{
-        border:none;
-        background: linear-gradient(35deg, #494949,#313131);
+        background: linear-gradient(35deg, #494949, #313131);
         font-size: 1.5rem;
-        color:white;
+        color: #fff;
         padding: 1rem 3rem;
-        border:none;
-        border-radius: 1rem;
-        outline:none;
+        border-radius: 0.8rem;
+        border: none;
+        outline: none;
+        width: 100%;
 
         svg {
             postion:absolute;
