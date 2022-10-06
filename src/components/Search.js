@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 // styling
 import styled from 'styled-components';
 import {FaSearch} from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -9,11 +10,13 @@ function Search() {
 
     // setState
     const [searchTerm, setSearchTerm] = useState("");
+    // navigate to search
+    const navigate=useNavigate();
 
     function handleSubmit(event){
         event.preventDefault();
-
-    }
+        navigate(`/searched/${searchTerm}`)
+    };
   return (
     // Insert form
     <Form onSubmit={handleSubmit}>
@@ -21,8 +24,10 @@ function Search() {
             <FaSearch></FaSearch>
             <input 
             type="text"
-            value={searchTerm}/>
-            
+            value={searchTerm}
+            onChange={(e)=> setSearchTerm(e.target.value)}
+            placeholder="Search here..."
+            />
         </div>
     </Form>
   )
