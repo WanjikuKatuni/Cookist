@@ -39,8 +39,22 @@ function Recipe() {
             <Button className={activeButton === 'ingredients'? 'active':''} onClick={()=> setActiveButton("ingredients")}>
                 Ingredients
             </Button>
-            {/* prevent html tags from showing in the data */}
-            <h3 dangerouslySetInnerHTML={{__html:recipeDetails.summary}}></h3>
+            {activeButton === 'instructions' && (
+                
+            // prevent html tags from showing in the data 
+            <div>
+                <h3 dangerouslySetInnerHTML={{__html:recipeDetails.summary}}></h3>
+                <h3  dangerouslySetInnerHTML={{__html:recipeDetails.instructions}}></h3>
+            </div>
+            )}
+            {activeButton === 'ingredients' &&(
+            // render ingredients array 
+            <ul>
+                {recipeDetails.etendedIngredients.map((ingredient)=>(
+                    <li key={ingredient.id}>{ingredient.original}</li>
+                ))}
+            </ul>
+            )}
         </Info>
     </DetailWrapper>
   )

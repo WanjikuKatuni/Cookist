@@ -28,6 +28,7 @@ function Cuisine() {
 
 
   return (
+    // list all items that match particular cuisine
     <Grid>
         {cuisineType.map((item)=>{
             return(
