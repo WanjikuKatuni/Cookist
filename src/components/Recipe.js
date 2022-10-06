@@ -33,10 +33,10 @@ function Recipe() {
             <img src={recipeDetails.image} alt={recipeDetails.title}/>
         </div>
         <Info>
-            <Button onClick={()=> setActiveButton("instructions")}>
+            <Button className={activeButton === 'instructions'? 'active':''} onClick={()=> setActiveButton("instructions")}>
                 Instructions
             </Button>
-            <Button onClick={()=> setActiveButton("ingredients")}>
+            <Button className={activeButton === 'ingredients'? 'active':''} onClick={()=> setActiveButton("ingredients")}>
                 Ingredients
             </Button>
         </Info>
