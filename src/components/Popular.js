@@ -20,8 +20,8 @@ function Popular() {
         fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&number=10`)
         .then((response)=>response.json())
         .then((data)=>{
-            console.log(data.recipes)
             setPopularData(data.recipes)
+            console.log(data.recipes)
         });
     }
 
@@ -30,17 +30,18 @@ function Popular() {
 
   return (
     <div>
-        Popular
-
+        <h3>Popular recipes</h3>
         {/* looping over the list and output recipes */}
         {popularData.map((recipe)=>{
             return(
                 <div key={recipe.id}> 
+                    
                     {/* lists all titles of the recipe */}
                     <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title}/>
                 </div>
             )
-        })}
+        })};
 
     </div>
   )
