@@ -9,6 +9,11 @@ import {motion} from "framer-motion"
 function Home() {
   return (
     <motion.div>
+       {/* animate transition of pages */}
+        animate={{opacity:1}}
+        intial={{opacity:0}}
+        exit={{opacity:0}}
+        transition={{duration:0.5}}
         <Vegan />
         <Popular />
 

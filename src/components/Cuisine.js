@@ -30,6 +30,12 @@ function Cuisine() {
   return (
     // list all items that match particular cuisine
     <Grid>
+        {/* animate transition of pages */}
+        animate={{opacity:1}}
+        intial={{opacity:0}}
+        exit={{opacity:0}}
+        transition={{duration:0.5}}
+
         {cuisineType.map((item)=>{
             return(
                 <Card key={item.id}>
