@@ -1,3 +1,5 @@
+// component for vegan foods
+
 import React from 'react'
 
 function Vegan() {

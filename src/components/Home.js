@@ -1,8 +1,17 @@
+// component for home page
+
+
 import React from 'react'
+import Popular from './Popular'
+import Vegan from './Vegan'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+        <Vegan />
+        <Popular />
+
+    </div>
   )
 }
 

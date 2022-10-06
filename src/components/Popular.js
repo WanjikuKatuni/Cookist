@@ -1,3 +1,5 @@
+// component for popular foods
+
 import React from 'react'
 
 function Popular() {
