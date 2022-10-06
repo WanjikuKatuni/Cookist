@@ -39,6 +39,8 @@ function Recipe() {
             <Button className={activeButton === 'ingredients'? 'active':''} onClick={()=> setActiveButton("ingredients")}>
                 Ingredients
             </Button>
+            {/* prevent html tags from showing in the data */}
+            <h3 dangerouslySetInnerHTML={{__html:recipeDetails.summary}}></h3>
         </Info>
     </DetailWrapper>
   )
