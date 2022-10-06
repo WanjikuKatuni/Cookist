@@ -46,7 +46,7 @@ function Cuisine() {
   )
 }
 
-const Grid = styled.div `
+const Grid = styled(motion.div) `
     display:grid;
     grid-gap:3rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
