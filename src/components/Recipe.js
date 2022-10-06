@@ -6,6 +6,8 @@ function Recipe() {
 
     const params = useParams();
     const [recipeDetails, setRecipeDetails]=useState({});
+    // set instructions buttone to be active by default
+    cont [activeButton, setActiveButton] = useState('instructions')
 
     useEffect(()=>{
         getRecipeDetails();
