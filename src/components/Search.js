@@ -21,12 +21,12 @@ function Search() {
     // Insert form
     <Form onSubmit={handleSubmit}>
         <div>
-            <FaSearch></FaSearch>
+            {/* <label>Search Here..</label> */}
             <input 
             type="text"
             value={searchTerm}
             onChange={(e)=> setSearchTerm(e.target.value)}
-            placeholder="Search here..."
+            placeholder="Search recipe here..."
             />
         </div>
     </Form>
@@ -41,9 +41,10 @@ const Form = styled.form `
         width: min(550px, 100%);
         margin: 0 auto;
         postion:relative;
+        
      }
      input{
-        background: linear-gradient(35deg, #494949, #313131);
+        background: linear-gradient(35deg, #ffcc80,#ca9b52);
         font-size: 1.5rem;
         color: #fff;
         padding: 1rem 3rem;
@@ -51,15 +52,7 @@ const Form = styled.form `
         border: none;
         outline: none;
         width: 100%;
-
-        svg {
-            postion:absolute;
-            top:50%;
-            left:0%;
-            transform: translate(100%,-50%);
-            color:white;
-        }
-
+        
      }
 `;
 

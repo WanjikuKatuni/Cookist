@@ -43,14 +43,14 @@ function Recipe() {
                 
             // prevent html tags from showing in the data 
             <div>
-                <h3 dangerouslySetInnerHTML={{__html:recipeDetails.summary}}></h3>
-                <h3  dangerouslySetInnerHTML={{__html:recipeDetails.instructions}}></h3>
+                <h5 dangerouslySetInnerHTML={{__html:recipeDetails.summary}}></h5>
+                <h6  dangerouslySetInnerHTML={{__html:recipeDetails.instructions}}></h6>
             </div>
             )}
             {activeButton === 'ingredients' &&(
             // render ingredients array 
             <ul>
-                {recipeDetails.etendedIngredients.map((ingredient)=>(
+                {recipeDetails.extendedIngredients.map((ingredient)=>(
                     <li key={ingredient.id}>{ingredient.original}</li>
                 ))}
             </ul>
@@ -66,16 +66,24 @@ const DetailWrapper = styled.div `
     margin-bottom: 5rem;
     display:flex;
     .active{
-        background: linear-gradient(35deg, #494949, #313131);
-        color: white;
+        background: linear-gradient(35deg, #ca9b52, #ffcc80);
+        color: black;
     }
 
     h2{
         margin-bottom: 2rem;
+        color:#5f4339;
+        padding-left: 2rem;
+        font-family: 'Chelsea Market', cursive;
+
+    }
+    img{
+        padding-left: 2rem;
     }
     li {
         font-size: 1.2rem;
         line-height: 2.5rem;
+        font-family: 'Life Savers', cursive;
 
     }
     ul{
@@ -88,7 +96,7 @@ const Button = styled.button`
     color: #313131;
     background: white;
     font-weight:600;
-    border: 2px solid black;
+    border: 2px solid #ca9b52;
     margin-right: 2rem;
 
 `;

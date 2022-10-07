@@ -61,6 +61,14 @@ const Grid = styled(motion.div) `
 `;
 
 const Card = styled.div`
+position: relative;
+border-radius: 2rem;
+min-height:2rem;
+overflow: hidden;
+border-color: #ca9b52;
+border-style: solid;
+border-width: 3px 3px 3px 3px;
+
  img{
     width: 100%;
     border-radius:2rem;

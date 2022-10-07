@@ -88,9 +88,12 @@ margin: 4rem 0rem;
 
 const Card = styled.div `
 position: relative;
-broder-radius: 2rem;
+border-radius: 2rem;
 min-height:2rem;
 overflow: hidden;
+border-color: #ca9b52;
+border-style: solid;
+border-width: 3px 3px 3px 3px;
 
 img {
     border-radius: 2rem;
@@ -107,14 +110,15 @@ p{
     z-index:10;
     transform:translate(-50%,0%);
     color: white;
-    width: 100%;
+    width: 50%;
     text-align:center;
-    font-weight:600;
-    font-size: 1rem;
+    font-weight:800;
+    font-size: 1.4rem;
     height:40%;
     display:flex;
     justify-conten: center;
     align-items:center;
+    font-family: 'Chelsea Market', cursive;
 }
 `;
 

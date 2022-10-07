@@ -45,7 +45,7 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-size: 8rem;
   font-weight: 400;
-  color: black;
+  color: #5f4339;
 `;
 
 export default App;
