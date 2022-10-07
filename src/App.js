@@ -10,6 +10,7 @@ import { GiKnifeFork } from "react-icons/gi";
 
 function App() {
   return (
+    // console.log("mynameisAnn")
     <div className="App">
       {/* <h1>Hello</h1> */}
       <BrowserRouter>
