@@ -9,7 +9,7 @@ Fork the project and:
         2. In a new terminal, run npm start. This will run your React app on port 8000.
 
 
-## Link to Live Site :[https://wanjikukatuni.github.io/W3-IP/]
+## Link to Live Site :[https://wanjikukatuni.github.io/Cookist/]
 
 MIT* Copyright (c) 2022 Ann Mwangi
 
