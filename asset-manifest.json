@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Cookist/static/css/main.a90afe6f.css",
+    "main.js": "/Cookist/static/js/main.13478696.js",
+    "index.html": "/Cookist/index.html",
+    "main.a90afe6f.css.map": "/Cookist/static/css/main.a90afe6f.css.map",
+    "main.13478696.js.map": "/Cookist/static/js/main.13478696.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a90afe6f.css",
+    "static/js/main.13478696.js"
+  ]
+}
